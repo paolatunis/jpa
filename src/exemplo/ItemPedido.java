@@ -13,7 +13,7 @@ public class ItemPedido {
 	
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(columnDefinition= "INT(4)")
+	@Column(name ="CodItemPedido", columnDefinition= "INT(4)")
 	private Integer codItemPedido;
 	
 	@ManyToOne
@@ -24,7 +24,7 @@ public class ItemPedido {
 	@JoinColumn(name = "CodPedido")
 	private Pedido pedido;
 	
-	@Column(columnDefinition="INT(5)", nullable= false)
+	@Column(name ="Quantidade", columnDefinition="INT(5)", nullable= false)
 	private Integer quantidade;
 
 	public ItemPedido() {

@@ -11,13 +11,13 @@ public class Produto {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(columnDefinition="INT(4)")
+	@Column(name ="CodProduto", columnDefinition="INT(4)")
 	private Integer codProduto;
 	
-	@Column(columnDefinition="VARCHAR(100)", nullable=false)
+	@Column(name ="Descricao", columnDefinition="VARCHAR(100)", nullable=false)
 	private String descricao;
 	
-	@Column(columnDefinition="DECIMAL(10,2)", nullable=false)
+	@Column(name ="ValorUnitario", columnDefinition="DECIMAL(10,2)", nullable=false)
 	private Double valorUnitario;
 	
 	public Produto() {

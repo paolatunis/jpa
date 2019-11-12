@@ -13,18 +13,18 @@ public class Vendedor {
 	
 	@Id //chave primária
 	@GeneratedValue(strategy=GenerationType.IDENTITY) //Especifica como a chave primária pode ser inicializada: Automático, manual ou valor tirado da tabela de seqüência.
-	@Column(columnDefinition= "INT(4)") //especifica coluna
+	@Column(name = "CodVendedor", columnDefinition= "INT(4)") //especifica coluna
 	private Integer codVendedor;
 	
 	
-	@Column(columnDefinition="VARCHAR(45)")
+	@Column(name = "Nome", columnDefinition="VARCHAR(45)")
 	private String nome;
 	
-	@Column(columnDefinition="DECIMAL(10,2)", nullable=false) //nullable false - not null
+	@Column(name = "SalarioFixo", columnDefinition="DECIMAL(10,2)", nullable=false) //nullable false - not null
 	private double salarioFixo;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(columnDefinition = "enum('A','B','C','D')", nullable=false) //not null
+	@Column(name = "FaixaComissao", columnDefinition = "enum('A','B','C','D')", nullable=false) //not null
 	private Comissao faixaComissao; //tem uma classe comissão que define como enum
 	
 		

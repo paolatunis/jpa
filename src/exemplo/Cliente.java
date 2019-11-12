@@ -11,25 +11,25 @@ public class Cliente {
 	
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(columnDefinition= "INT(4)")
+	@Column(name ="CodCliente", columnDefinition= "INT(4)")
 	private Integer codCliente;
 	
-	@Column(columnDefinition="VARCHAR(100)", nullable=false)
+	@Column(name ="Nome",columnDefinition="VARCHAR(100)", nullable=false)
 	private String nome;
 	
-	@Column(columnDefinition="VARCHAR(255)", nullable=false)
+	@Column(name ="Endereco",columnDefinition="VARCHAR(255)", nullable=false)
 	private String endereco;
 	
-	@Column(columnDefinition="VARCHAR(60)", nullable=false)
+	@Column(name ="Cidade",columnDefinition="VARCHAR(60)", nullable=false)
 	private String cidade;
 	
-	@Column(columnDefinition="VARCHAR(11)", nullable=false)
+	@Column(name ="Cep",columnDefinition="VARCHAR(11)", nullable=false)
 	private String cep;
 	
-	@Column(columnDefinition="VARCHAR(2)", nullable=false)
+	@Column(name ="Uf",columnDefinition="VARCHAR(2)", nullable=false)
 	private String uf;
 	
-	@Column(columnDefinition="VARCHAR(12)", nullable=false)
+	@Column(name ="Ie",columnDefinition="VARCHAR(12)", nullable=false)
 	private String ie;
 	
 	public Cliente() {

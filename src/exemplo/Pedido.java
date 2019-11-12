@@ -16,7 +16,7 @@ public class Pedido {
 	
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(columnDefinition= "INT(4)")
+	@Column(name ="CodPedido", columnDefinition= "INT(4)")
 	private Integer codPedido;
 	
 	@Column(name = "PrazoEntrega", columnDefinition="date", nullable = false)
